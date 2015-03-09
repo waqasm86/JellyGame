@@ -26,6 +26,7 @@ public class MouseMove : MonoBehaviour {
             Time.timeScale = 0.6f;
             beginposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, 1));
+            print(beginposition.ToString());
             isclicked = true;
             tr = (Transform)Instantiate(prefab, new Vector3(beginposition.x,beginposition.y,0),
                 Quaternion.identity);
@@ -35,14 +36,16 @@ public class MouseMove : MonoBehaviour {
             lineRender.material.color = linecolor;
             lineRender.SetWidth(0.1f, 0.1f);
             lineRender.SetVertexCount(3);
-            lineRender.SetPosition(0, beginposition);
+            lineRender.SetPosition(0, new Vector3(beginposition.x,beginposition.y,-0.5f));
             
         }
         if (Mousedown && isclicked && rolecontroller.isrunning) {
             midposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                  Input.mousePosition.y, 1));
-            lineRender.SetPosition(1, midposition);
-            lineRender.SetPosition(2, beginposition);
+          //  lineRender.SetPosition(1, midposition);
+          //  lineRender.SetPosition(2, beginposition);
+            lineRender.SetPosition(1, new Vector3(midposition.x,midposition.y,-0.5f));
+            lineRender.SetPosition(2, new Vector3(beginposition.x, beginposition.y, -0.5f));
         }
         
         if (Input.GetMouseButtonUp(0)&&isclicked&&rolecontroller.isrunning) {
@@ -55,7 +58,7 @@ public class MouseMove : MonoBehaviour {
             float distance = Mathf.Sqrt(Mathf.Pow((beginposition.y - endposition.y), 2) + Mathf.Pow((beginposition.x - endposition.x), 2));
             Transform tr1 = (Transform)Instantiate(prefab1, (beginposition + endposition) / 2, Quaternion.AngleAxis(angle * 180 / 3.14f, Vector3.forward));
             boxcollider2D = tr1.GetComponent<BoxCollider2D>();
-            boxcollider2D.size = new Vector2(distance, 1);
+            boxcollider2D.size = new Vector2(distance, 0.2f);
             
         }
 	}
