@@ -209,6 +209,7 @@
     <Compile Include="Assets\Scripts\RowCollider3.cs" />
     <Compile Include="Assets\Scripts\RowCollider4.cs" />
     <Compile Include="Assets\Scripts\SetScores.cs" />
+    <Compile Include="Assets\Scripts\SettingGame.cs" />
     <Compile Include="Assets\Scripts\TimeCount.cs" />
     <Compile Include="Assets\Scripts\UIScreenAdaptive.cs" />
     <Compile Include="Assets\Scripts\moveandscale.cs" />
