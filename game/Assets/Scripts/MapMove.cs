@@ -24,7 +24,9 @@ public class MapMove : MonoBehaviour {
             1 << LayerMask.NameToLayer("background"));
         roleposition = role.transform.position;
         roleViewportPosition = Camera.main.WorldToViewportPoint(roleposition);
-        
+        print("width   " + cameraRect.xMax + " height    " + cameraRect.yMax);
+     //   maps[0].transform.FindChild("background").transform.localScale = new Vector3(
+    //        Screen.width/4535/0.4f, Screen.height/2551/0.4f, 1);
     }
 	
 	// Update is called once per frame

@@ -20,7 +20,7 @@ public class MouseMove : MonoBehaviour {
 	void Update () {
         bool Mousedown = Input.GetMouseButton(0);
         if (Input.GetMouseButtonDown(0)&&!isclicked && rolecontroller.isrunning) {
-            Time.timeScale = 0.6f;
+            Time.timeScale = 0.2f;
             beginposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, 1));
             print(beginposition.ToString());
