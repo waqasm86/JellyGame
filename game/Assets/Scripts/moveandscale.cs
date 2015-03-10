@@ -47,7 +47,7 @@ public class moveandscale : MonoBehaviour {
             else if (Input.GetTouch(0).phase == TouchPhase.Ended) {
                 print("end"+Input.GetTouch(0).position.ToString());
                 endX = Input.GetTouch(0).position.x;
-                endY = Input.GetTouch(0).position.
+                endY = Input.GetTouch(0).position.y;
                 Vector3 tv = Camera.main.ScreenToWorldPoint(new Vector3(beginX,beginY,1));
                 Vector3 tv2 = Camera.main.ScreenToWorldPoint(new Vector3(endX, endY, 1));
                 Vector3 tv3 = Camera.main.ScreenToViewportPoint(new Vector3(beginX, beginY, 1));

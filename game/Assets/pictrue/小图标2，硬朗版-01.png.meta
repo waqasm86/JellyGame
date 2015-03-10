@@ -1,6 +1,11 @@
 fileFormatVersion: 2
 guid: b1c873cb7d72b499e90075a63b07b9dc
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: "\u5C0F\u56FE\u68072\uFF0C\u786C\u6717\u7248-01_0"
+    21300002: "\u5C0F\u56FE\u68072\uFF0C\u786C\u6717\u7248-01_1"
+    21300004: "\u5C0F\u56FE\u68072\uFF0C\u786C\u6717\u7248-01_2"
+    21300006: "\u5C0F\u56FE\u68072\uFF0C\u786C\u6717\u7248-01_3"
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
