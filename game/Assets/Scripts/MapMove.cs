@@ -11,7 +11,7 @@ public class MapMove : MonoBehaviour {
     Vector3 cemerasize,rootmap,roleposition,roleViewportPosition;
     public Transform[] mapprefabs;
     Transform tr, tr1, tr2;
-
+    SpriteRenderer a;
     void Awake() {
         role = GameObject.FindGameObjectWithTag("Player");
     }
@@ -24,6 +24,7 @@ public class MapMove : MonoBehaviour {
             1 << LayerMask.NameToLayer("background"));
         roleposition = role.transform.position;
         roleViewportPosition = Camera.main.WorldToViewportPoint(roleposition);
+        
     }
 	
 	// Update is called once per frame
