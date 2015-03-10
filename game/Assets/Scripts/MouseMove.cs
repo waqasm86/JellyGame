@@ -4,16 +4,13 @@ using System.Collections;
 public class MouseMove : MonoBehaviour {
 
     public LineRenderer lineRender;
-    Vector3 beginposition;
-    Vector3 endposition;
-    Vector3 midposition;
+    Vector3 beginposition,endposition,midposition;
     bool isclicked = false;
     BoxCollider2D boxcollider2D;
-    public Transform prefab;
-    public Transform prefab1;
-    public Transform parent;
+    public Transform prefab,prefab1,parent;
     public Color linecolor;
     Transform tr;
+
 	// Use this for initialization
 	void Start () {
 	

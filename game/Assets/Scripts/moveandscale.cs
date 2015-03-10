@@ -47,41 +47,19 @@ public class moveandscale : MonoBehaviour {
             else if (Input.GetTouch(0).phase == TouchPhase.Ended) {
                 print("end"+Input.GetTouch(0).position.ToString());
                 endX = Input.GetTouch(0).position.x;
-                endY = Input.GetTouch(0).position.y;
-            //    Vector3 tv4 = UICamera.currentCamera.ScreenToViewportPoint(new Vector3(beginX,beginY,1));
+                endY = Input.GetTouch(0).position.
                 Vector3 tv = Camera.main.ScreenToWorldPoint(new Vector3(beginX,beginY,1));
                 Vector3 tv2 = Camera.main.ScreenToWorldPoint(new Vector3(endX, endY, 1));
                 Vector3 tv3 = Camera.main.ScreenToViewportPoint(new Vector3(beginX, beginY, 1));
-          //      Vector3 tv4 = parent.localPosition;
                 float angle = Mathf.Atan2((beginX - endX),(beginY-endY));
-                print(tv);
-                print(tv2);
-                print(tv3);
-            //    print("uicamera" + tv4.ToString());
-             //   if(beginX<endX)
-            /*    Vector3 tv5= new Vector3();
-                Ray ray = UICamera.currentCamera.ScreenPointToRay(new Vector3(beginX,beginY,0));
-                print(ray.ToString());
-                RaycastHit hit;
-                if (Physics.Raycast(ray, out hit)) {
-                     tv5= parent.InverseTransformPoint(hit.point);
-                     print("yes");
-                }
-                Vector3 tv6 = parent.TransformPoint(tv5);
-                print("xiangdui " + tv5.ToString());
-                print("juedui" + tv6.ToString());
-            */
                 print("parent" + parent.position.ToString());
                  Transform tr = (Transform)Instantiate(prefeb,tv3,Quaternion.AngleAxis(((angle)*180/3.14f),Vector3.forward));
                  tr.parent = parent;
                  tr.localPosition = new Vector3(beginX/Screen.width*782,beginY/Screen.height*320,0);
                 tr.localScale= new Vector3(1, 1, 1 );
-                //   else
-                //    Instantiate(prefeb, tv3, Quaternion.AngleAxis(((angle) * 180 / 3.14f), Vector3.forward));
             }
             else if (Input.GetTouch(0).phase == TouchPhase.Began){
                 print("begin"+Input.GetTouch(0).position.ToString());
-                
                 beginX = Input.GetTouch(0).position.x;
                 beginY = Input.GetTouch(0).position.y;
             }
@@ -89,7 +67,6 @@ public class moveandscale : MonoBehaviour {
         else if(inputcount>1){
             if (Input.GetTouch(0).phase == TouchPhase.Moved || Input.GetTouch(1).phase == TouchPhase.Moved)
             {
-
                 var tempPosition1 = Input.GetTouch(0).position;
                 var tempPosition2 = Input.GetTouch(1).position;
                 if (isEnlarge(oldPosition1, oldPosition2, tempPosition1, tempPosition2))
@@ -134,7 +111,6 @@ public class moveandscale : MonoBehaviour {
             Vector3 worldpositionbl = UICamera.currentCamera.ViewportToScreenPoint(new Vector3(1, 1, distance));
             transform.rotation = rotation;
             transform.position = position;
-         //   print(worldpositionbl.ToString());
         }
     }
     float ClampAngle(float angle,float min,float max) {

@@ -31,14 +31,6 @@ public class rolecontroller : MonoBehaviour {
             Time.timeScale = 0.0f;
             print(hitInfo.collider.gameObject.name);
         }
-
-        //bool onground1 = Physics.Raycast(transform.position,
-        //    new Vector3(transform.rigidbody2D.velocity.x, transform.rigidbody2D.velocity.y, 0), 3,
-        //    1 << LayerMask.NameToLayer("background"));
-        //if (onground1) {
-        //    Time.timeScale = 0.0f;
-        //}
-
         bool Mousedown = Input.GetMouseButton(0);
 
         if (Mousedown && !isclicked&&!isrunning)
