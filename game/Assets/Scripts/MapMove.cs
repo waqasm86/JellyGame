@@ -38,15 +38,15 @@ public class MapMove : MonoBehaviour {
         }
         switch (notify) { 
             case 1://经过map[0]往上
-                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
                 rootmap = maps[0].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[2].transform.position = new Vector3(rootmap.x,
@@ -67,15 +67,16 @@ public class MapMove : MonoBehaviour {
                 }
 				break;
             case 2://经过map[0]往下
-                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
                 rootmap = maps[0].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[2].transform.position = new Vector3(rootmap.x,
@@ -96,15 +97,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 3://经过map[0]往左
-                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
                 rootmap = maps[0].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[1].transform.position = new Vector3(rootmap.x - 2 * cemerasize.x
@@ -123,15 +124,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 4://经过map[0]往右
-                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[0].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -154,15 +155,15 @@ public class MapMove : MonoBehaviour {
 
             case 5://经过map[1]往上
                 rootmap = maps[1].transform.position;
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[3].transform.position = new Vector3(rootmap.x,
@@ -184,15 +185,15 @@ public class MapMove : MonoBehaviour {
                 break;
             case 6://经过map[1]往下
                 rootmap = maps[1].transform.position;
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[3].transform.position = new Vector3(rootmap.x,
@@ -213,15 +214,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 7://经过map[1]往左
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[1].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -243,15 +244,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 8://经过map[1]往右
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[1].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -275,15 +276,15 @@ public class MapMove : MonoBehaviour {
 
 
             case 9://经过map[2]往上
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[2].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -305,15 +306,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 10://经过map[2]往下
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[2].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -335,15 +336,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 11://经过map[2]往左
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[2].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -371,15 +372,15 @@ public class MapMove : MonoBehaviour {
 //                    rootmap.y - 2 * cemerasize.y, 0);
                 break;
             case 12://经过map[2]往右
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[3], maps[3].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[2].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -402,16 +403,16 @@ public class MapMove : MonoBehaviour {
                 break;
 
             case 13://经过map[3]往上
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
-	
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
+//	
                 rootmap = maps[3].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
                 maps[1].transform.position = new Vector3(rootmap.x,
@@ -432,15 +433,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 14://经过map[3]往下
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
 
                 rootmap = maps[3].transform.position;
@@ -463,15 +464,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 15://经过map[3]往左
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[3].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
@@ -493,15 +494,15 @@ public class MapMove : MonoBehaviour {
                 }
                 break;
             case 16://经过map[3]往右
-                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
-                Quaternion.identity);
-                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
-                Quaternion.identity);
-                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
-                Quaternion.identity);
-                Destroy(tr.gameObject,1);
-                Destroy(tr1.gameObject, 1);
-                Destroy(tr2.gameObject, 1);
+//                tr = (Transform)Instantiate(mapprefabs[0], maps[0].transform.position,
+//                Quaternion.identity);
+//                tr1 = (Transform)Instantiate(mapprefabs[2], maps[2].transform.position,
+//                Quaternion.identity);
+//                tr2 = (Transform)Instantiate(mapprefabs[1], maps[1].transform.position,
+//                Quaternion.identity);
+//                Destroy(tr.gameObject,1);
+//                Destroy(tr1.gameObject, 1);
+//                Destroy(tr2.gameObject, 1);
 
                 rootmap = maps[3].transform.position;
 				roleViewportPosition = Camera.main.WorldToViewportPoint(rootmap);
