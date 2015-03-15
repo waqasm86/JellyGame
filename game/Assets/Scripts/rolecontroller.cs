@@ -14,33 +14,47 @@ public class rolecontroller : MonoBehaviour {
     bool isclicked;
     Vector3 beginposition;
     Vector3 endposition;
+    bool initempanel;
 	// Use this for initialization
 	void Start () {
         isrunning = false;
-        print(transform.position);
+        initempanel = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        Ray2D ray2 = new Ray2D(new Vector2(transform.position.x,transform.position.y),transform.rigidbody2D.velocity);
-        RaycastHit2D hitInfo;
-        hitInfo = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y),
-           transform.rigidbody2D.velocity, 1, 1 << LayerMask.NameToLayer("item"));
-        if (hitInfo.collider != null)
-        {
-            Time.timeScale = 0.0f;
-            print(hitInfo.collider.gameObject.name);
-        }
+        //Ray2D ray2 = new Ray2D(new Vector2(transform.position.x,transform.position.y),transform.rigidbody2D.velocity);
+        //RaycastHit2D hitInfo;
+        //hitInfo = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y),
+        //   transform.rigidbody2D.velocity, 1, 1 << LayerMask.NameToLayer("item"));
+        //if (hitInfo.collider != null)
+        //{
+        //    Time.timeScale = 0.0f;
+        //    print(hitInfo.collider.gameObject.name);
+        //}
         bool Mousedown = Input.GetMouseButton(0);
-
-        if (Mousedown && !isclicked&&!isrunning)
+        if (UICamera.hoveredObject != null)
+        {
+            if (UICamera.hoveredObject.tag.Equals("SelectColor") ||
+                UICamera.hoveredObject.tag.Equals("stopButton"))
+            {
+                initempanel = true;
+                return;
+            }
+        }
+        if (Input.GetMouseButtonUp(0)&&initempanel) 
+        {
+            initempanel = false;
+        }
+        if (Mousedown && !isclicked&&!isrunning && !initempanel)
         {
             Time.timeScale = 0.3f;
             beginposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, 1));
             isclicked = true;
+         
         }
-        if (Input.GetMouseButtonUp(0)&&!isrunning)
+        if (Input.GetMouseButtonUp(0)&&!isrunning&&isclicked)
         {
             isclicked = false;
             Time.timeScale = 1.0f;

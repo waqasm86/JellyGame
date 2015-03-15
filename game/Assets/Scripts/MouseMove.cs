@@ -8,18 +8,27 @@ public class MouseMove : MonoBehaviour {
     bool isclicked = false;
     BoxCollider2D boxcollider2D;
     public Transform prefab,prefab1,parent;
-    public Color linecolor;
+    public Color[] linecolor;
+    public static int selectColorindex;
     Transform tr;
 
 	// Use this for initialization
 	void Start () {
-	
+        selectColorindex = 0;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         bool Mousedown = Input.GetMouseButton(0);
         if (Input.GetMouseButtonDown(0)&&!isclicked && rolecontroller.isrunning) {
+            if(UICamera.hoveredObject !=null)
+            {
+                if(UICamera.hoveredObject.tag.Equals("SelectColor")||
+                    UICamera.hoveredObject.tag.Equals("stopButton"))
+                {
+                    return;
+                }
+            }
             Time.timeScale = 0.2f;
             beginposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, 1));
@@ -30,7 +39,7 @@ public class MouseMove : MonoBehaviour {
             tr.parent = parent;
 
             lineRender = tr.GetComponent<LineRenderer>();
-            lineRender.material.color = linecolor;
+            lineRender.material.color = linecolor[selectColorindex];
             lineRender.SetWidth(0.1f, 0.1f);
             lineRender.SetVertexCount(3);
             lineRender.SetPosition(0, new Vector3(beginposition.x,beginposition.y,-0.5f));

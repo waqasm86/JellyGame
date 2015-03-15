@@ -6,6 +6,7 @@ public class SettingGame : MonoBehaviour {
 
     public TweenPosition Tposition;
     public static bool onthebackground;
+    public UIScrollBar scroll;
 	// Use this for initialization
 	void Start () {
         onthebackground = false;
@@ -34,5 +35,29 @@ public class SettingGame : MonoBehaviour {
     }
     public void backtoMissionSelection() {
         Application.LoadLevel("MissionSelection");
+    }
+    public void setSelectedItem()
+    {
+        //        print(scroll.value);
+        if (scroll.value == 1)
+        {
+            MouseMove.selectColorindex = 0;
+        }
+        else if (scroll.value < 0.9f && scroll.value > 0.6f)
+        {
+            MouseMove.selectColorindex = 1;
+        }
+        else if (scroll.value < 0.6f && scroll.value > 0.4f)
+        {
+            MouseMove.selectColorindex = 2;
+        }
+        else if (scroll.value < 0.4f && scroll.value > 0.2f)
+        {
+            MouseMove.selectColorindex = 3;
+        }
+        else if (scroll.value == 0)
+        {
+            MouseMove.selectColorindex = 4;
+        }
     }
 }
