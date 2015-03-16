@@ -204,6 +204,7 @@
     <Compile Include="Assets\Scripts\MapMove.cs" />
     <Compile Include="Assets\Scripts\MapMoveByLHX.cs" />
     <Compile Include="Assets\Scripts\MouseMove.cs" />
+    <Compile Include="Assets\Scripts\Notifyforcolor.cs" />
     <Compile Include="Assets\Scripts\RowCollider1.cs" />
     <Compile Include="Assets\Scripts\RowCollider2.cs" />
     <Compile Include="Assets\Scripts\RowCollider3.cs" />

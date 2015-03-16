@@ -28,7 +28,7 @@ public class MapMoveByLHX : MonoBehaviour {
     //    print("world:" + a.ToString());
         roleposition = role.transform.position;
         roleViewportPosition = Camera.main.WorldToViewportPoint(roleposition);
-        print("aaa"+roleViewportPosition.ToString());
+ //       print("aaa"+roleViewportPosition.ToString());
     }
 	
 	// Update is called once per frame

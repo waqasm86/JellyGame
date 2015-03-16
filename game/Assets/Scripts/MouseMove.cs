@@ -9,16 +9,25 @@ public class MouseMove : MonoBehaviour {
     BoxCollider2D boxcollider2D;
     public Transform prefab,prefab1,parent;
     public Color[] linecolor;
+    public float[] colorUsed;
     public static int selectColorindex;
+    public GameObject[] sendmsg;
     Transform tr;
-
+    float singleUsed;
 	// Use this for initialization
 	void Start () {
         selectColorindex = 0;
+        singleUsed = 0;
 	}
-	
+    public static float InvSqrt(float x1,float x2,float y1,float y2)
+    {
+        float a = Mathf.Sqrt(Mathf.Pow(x1 - x2, 2) + Mathf.Pow(y1 - y2, 2));
+        return a;
+    }
 	// Update is called once per frame
 	void Update () {
+        if (TimeCount.gameOver)
+            return;
         bool Mousedown = Input.GetMouseButton(0);
         if (Input.GetMouseButtonDown(0)&&!isclicked && rolecontroller.isrunning) {
             if(UICamera.hoveredObject !=null)
@@ -29,6 +38,7 @@ public class MouseMove : MonoBehaviour {
                     return;
                 }
             }
+            singleUsed = 0;
             Time.timeScale = 0.2f;
             beginposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                 Input.mousePosition.y, 1));
@@ -45,13 +55,14 @@ public class MouseMove : MonoBehaviour {
             lineRender.SetPosition(0, new Vector3(beginposition.x,beginposition.y,-0.5f));
             
         }
-        if (Mousedown && isclicked && rolecontroller.isrunning) {
+        if (Mousedown && isclicked && rolecontroller.isrunning && colorUsed[selectColorindex]>0) {
             midposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                  Input.mousePosition.y, 1));
           //  lineRender.SetPosition(1, midposition);
           //  lineRender.SetPosition(2, beginposition);
             lineRender.SetPosition(1, new Vector3(midposition.x,midposition.y,-0.5f));
             lineRender.SetPosition(2, new Vector3(beginposition.x, beginposition.y, -0.5f));
+            singleUsed = InvSqrt(midposition.x,beginposition.x,midposition.y,beginposition.y);
         }
         
         if (Input.GetMouseButtonUp(0)&&isclicked&&rolecontroller.isrunning) {
@@ -65,7 +76,12 @@ public class MouseMove : MonoBehaviour {
             Transform tr1 = (Transform)Instantiate(prefab1, (beginposition + endposition) / 2, Quaternion.AngleAxis(angle * 180 / 3.14f, Vector3.forward));
             boxcollider2D = tr1.GetComponent<BoxCollider2D>();
             boxcollider2D.size = new Vector2(distance, 0.2f);
-            
+            colorUsed[selectColorindex] -= singleUsed;
+            if (colorUsed[selectColorindex] <= 0)
+            {
+                colorUsed[selectColorindex] = 0;
+            }
+            sendmsg[selectColorindex].SendMessage("ColorChangetoMuch", colorUsed[selectColorindex]);
         }
 	}
 }

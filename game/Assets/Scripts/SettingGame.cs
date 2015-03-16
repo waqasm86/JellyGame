@@ -4,7 +4,8 @@ using System.Collections;
 public class SettingGame : MonoBehaviour {
 
 
-    public TweenPosition Tposition;
+    public TweenPosition TpositionGameMenu;
+    public TweenPosition TpositionGameOverMenu;
     public static bool onthebackground;
     public UIScrollBar scroll;
 	// Use this for initialization
@@ -18,23 +19,33 @@ public class SettingGame : MonoBehaviour {
 	}
 
     public void getmenu() {
-        Tposition.enabled = true;
+        TpositionGameMenu.enabled = true;
         if (onthebackground)
         {
-            Tposition.PlayReverse();
+            TpositionGameMenu.PlayReverse();
             onthebackground = false;
             Time.timeScale = 1.0f;
         }
         else
         {
             Time.timeScale = 0.0f;
-            Tposition.PlayForward();
+            TpositionGameMenu.PlayForward();
             onthebackground = true;
 
         }
     }
+    public void getOverMenu() 
+    {
+        TpositionGameOverMenu.enabled = true;
+        Time.timeScale = 0.0f;
+        TpositionGameOverMenu.PlayForward();
+    }
     public void backtoMissionSelection() {
         Application.LoadLevel("MissionSelection");
+    }
+    public void replay() 
+    {
+        Application.LoadLevel("mission1-1");
     }
     public void setSelectedItem()
     {
