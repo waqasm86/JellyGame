@@ -20,18 +20,22 @@ public class SettingGame : MonoBehaviour {
 
     public void getmenu() {
         TpositionGameMenu.enabled = true;
-        if (onthebackground)
-        {
-            TpositionGameMenu.PlayReverse();
-            onthebackground = false;
-            Time.timeScale = 1.0f;
-        }
-        else
+      
+        if(!onthebackground)
         {
             Time.timeScale = 0.0f;
             TpositionGameMenu.PlayForward();
             onthebackground = true;
 
+        }
+    }
+    public void menuBack()
+    {
+        if (onthebackground)
+        {
+            TpositionGameMenu.PlayReverse();
+            onthebackground = false;
+            Time.timeScale = 1.0f;
         }
     }
     public void getOverMenu() 
