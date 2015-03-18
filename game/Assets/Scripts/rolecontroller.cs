@@ -23,15 +23,6 @@ public class rolecontroller : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //Ray2D ray2 = new Ray2D(new Vector2(transform.position.x,transform.position.y),transform.rigidbody2D.velocity);
-        //RaycastHit2D hitInfo;
-        //hitInfo = Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y),
-        //   transform.rigidbody2D.velocity, 1, 1 << LayerMask.NameToLayer("item"));
-        //if (hitInfo.collider != null)
-        //{
-        //    Time.timeScale = 0.0f;
-        //    print(hitInfo.collider.gameObject.name);
-        //}
         bool Mousedown = Input.GetMouseButton(0);
         if (UICamera.hoveredObject != null)
         {

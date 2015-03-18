@@ -14,6 +14,6 @@ public class Collider4 : MonoBehaviour {
 		int temp = Colliders.getCurrentMap();
 		Colliders.SetCurrentMap (4);
 		Colliders.SetLastMap (temp);
-        print(temp);
+        print(1111111111111111+temp);
 	}
 }
