@@ -28,6 +28,8 @@ public class MouseMove : MonoBehaviour {
 	void Update () {
         if (TimeCount.gameOver)
             return;
+        if (colorUsed[selectColorindex] == 0)
+            return;
         bool Mousedown = Input.GetMouseButton(0);
         if (Input.GetMouseButtonDown(0)&&!isclicked && rolecontroller.isrunning) {
             if(UICamera.hoveredObject !=null)
@@ -50,12 +52,12 @@ public class MouseMove : MonoBehaviour {
 
             lineRender = tr.GetComponent<LineRenderer>();
             lineRender.material.color = linecolor[selectColorindex];
-            lineRender.SetWidth(0.1f, 0.1f);
+            lineRender.SetWidth(0.5f, 0.5f);
             lineRender.SetVertexCount(3);
             lineRender.SetPosition(0, new Vector3(beginposition.x,beginposition.y,-0.5f));
             
         }
-        if (Mousedown && isclicked && rolecontroller.isrunning && colorUsed[selectColorindex]>0) {
+        if (Mousedown && isclicked && rolecontroller.isrunning) {
             midposition = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x,
                  Input.mousePosition.y, 1));
           //  lineRender.SetPosition(1, midposition);

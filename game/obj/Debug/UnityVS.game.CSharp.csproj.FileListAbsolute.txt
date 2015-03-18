@@ -5,3 +5,5 @@ F:\Runningjelly\JellyGame\game\Temp\UnityVS_bin\Debug\UnityEngine.dll
 F:\Runningjelly\JellyGame\game\obj\Debug\UnityVS.game.CSharp.csprojResolveAssemblyReference.cache
 F:\Runningjelly\JellyGame\game\obj\Debug\Assembly-CSharp.dll
 F:\Runningjelly\JellyGame\game\obj\Debug\Assembly-CSharp.pdb
+F:\Runningjelly\JellyGame\game\Temp\UnityVS_bin\Debug\UnityEngine.xml
+F:\Runningjelly\JellyGame\game\Temp\UnityVS_bin\Debug\UnityEditor.xml

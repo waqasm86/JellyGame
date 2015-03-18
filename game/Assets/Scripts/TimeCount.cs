@@ -23,7 +23,7 @@ public class TimeCount : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if(uislider.value> 0)
+        if(uislider.value> 0 &&rolecontroller.isrunning)
             uislider.value -= 0.05f*Time.deltaTime;
         if (uislider.value <= 0)
             uislider.value = 0;

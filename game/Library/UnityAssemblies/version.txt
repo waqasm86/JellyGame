@@ -1,2 +1,2 @@
-4.5.1f3:1.9.8.0
-/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.Graphs.dll
+4.5.5f1:1.9.8.0
+F:/U3D/Editor/Data/Managed/UnityEditor.Graphs.dll

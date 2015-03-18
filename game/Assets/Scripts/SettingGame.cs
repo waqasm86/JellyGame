@@ -8,6 +8,8 @@ public class SettingGame : MonoBehaviour {
     public TweenPosition TpositionGameOverMenu;
     public static bool onthebackground;
     public UIScrollBar scroll;
+    public UIButton getmenuobj;
+    public UIScrollView scrollview;
 	// Use this for initialization
 	void Start () {
         onthebackground = false;
@@ -43,6 +45,8 @@ public class SettingGame : MonoBehaviour {
         TpositionGameOverMenu.enabled = true;
         Time.timeScale = 0.0f;
         TpositionGameOverMenu.PlayForward();
+        getmenuobj.enabled = false;
+        scrollview.enabled = false;
     }
     public void backtoMissionSelection() {
         Application.LoadLevel("MissionSelection");
